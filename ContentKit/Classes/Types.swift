@@ -47,14 +47,14 @@ public struct Size {
 
 public extension Size {
     
-    var asCGSize: CGSize {
+    public var asCGSize: CGSize {
         return CGSize(size: self)
     }
 }
 
 public extension CGSize {
     
-    init(size: Size) {
+    public init(size: Size) {
         self.init(width: CGFloat(size.width), height: CGFloat(size.height))
     }
 }

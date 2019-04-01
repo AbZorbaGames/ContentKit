@@ -46,36 +46,36 @@ public protocol Text: Content, LosslessStringConvertible, CustomPlaygroundDispla
 
 public extension Text {
     
-    var description: String {
+    public var description: String {
         return self.content
     }
     
-    var empty: Bool { return self.content.isEmpty }
+    public var empty: Bool { return self.content.isEmpty }
 }
 
 public extension Text {
     
-    func debugQuickLookObject() -> AnyObject? {
+    public func debugQuickLookObject() -> AnyObject? {
         return self.content as NSString
     }
     
-    var playgroundDescription: Any {
+    public var playgroundDescription: Any {
         return self.content
     }
 }
 
 public extension Text {
     
-    var hashValue: Int {
+    public var hashValue: Int {
         return self.content.hashValue
     }
     
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
         return (lhs.content.hashValue == rhs.content.hashValue) ||
             (lhs.content == rhs.content)
     }
     
-    static func < (lhs: Self, rhs: Self) -> Bool {
+    public static func < (lhs: Self, rhs: Self) -> Bool {
         return (lhs.content < rhs.content)
     }
 }

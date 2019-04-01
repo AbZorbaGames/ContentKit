@@ -33,7 +33,7 @@ public protocol TextRepresentation: Representation, Text {}
 public extension DictionaryRepresentation {
 
     /// Returns a Textual Representation.
-    var textualRepresentation: TextRepresentation {
+    public var textualRepresentation: TextRepresentation {
         return self.represent(using: TextRepresentationBuilder()) as! TextRepresentation
     }
 }

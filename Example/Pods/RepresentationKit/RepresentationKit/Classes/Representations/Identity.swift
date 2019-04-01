@@ -29,8 +29,7 @@ public protocol Identity {
 }
 
 public extension Identity where Self: Representable {
-    
-    func identify() -> [String : Any] {
+    public func identify() -> [String : Any] {
         let representation: DictionaryRepresentation = self.represent(using: DictionaryRepresentationBuilder())
         return representation.dictionary
     }
